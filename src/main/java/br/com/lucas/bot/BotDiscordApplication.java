@@ -1,13 +1,13 @@
 package br.com.lucas.bot;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+import br.com.lucas.bot.modules.discord.command.Auth;
+
+import javax.security.auth.login.LoginException;
+
 public class BotDiscordApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BotDiscordApplication.class, args);
+	public static void main(String[] args) throws LoginException {
+		new Auth().execute();
 	}
-
 }
